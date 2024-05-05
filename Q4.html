@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Q4">
+    <title>Exercise 4</title>
+    <style>
+        form{
+         border: solid 1px;
+         padding: 20px;
+        }
+     </style>
+</head>
+<body>
+    
+    <script>
+       function order(){
+        let x=document.getElementById("a").value;
+        let y=document.getElementById( "b").value;
+        let z=document.getElementById("c").value;
+        let total=19.99*x+86*y+55*z;
+        
+        if(x=="" ||y=="" || z==""){ alert('All fields must be filled out');return;}
+           
+                                              
+        document.getElementById("d").innerHTML+="<b>Basic Web Programming (Quantity: "+x+"):</b>$"+19.99*x
+                                              +"<br><b>Intro to PHP (Quantity:"+y+"):</b>$"+86*y
+                                              +"<br><b>Advanced JQuery (Quantity:"+z+"):</b>$"+55*z
+                                              +"<br><br><b>Final Total:</b> $"+total;
+                                            } 
+    </script>
+    
+    <h2>Order Books Online</h2>
+    <form>
+        
+            
+        <table>
+            <tr>
+                <th>Book</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td><label for="a">Basic Web Programming</label></td>
+                <td><input type="number" id="a"></td>
+                <td>$19.99</td>
+            </tr>
+            <tr>
+                <td><label for="b">Intro to PHP</label></td>
+                <td><input type="number" id="b"></td>
+                <td>$86.00</td>
+            </tr>
+            <tr>
+                <td><label for="c">Advanced JQuery</label></td>
+                <td><input type="number" id="c"></td>
+                <td>$55.00</td>
+            </tr>
+        </table>
+    
+    <br>
+   
+    <button type="button" onclick="order()">Calculate the order</button>
+    </form>
+    <span id="d"></span>
+</body>
+</html>

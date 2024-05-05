@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Q6" >
+    <title>Exercise 6</title>
+    <style>
+        a{
+            color:lightblue;
+            text-decoration:underline;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h2{
+            font-family:'Times New Roman', Times, serif;
+        }
+        p{
+            font-family:'Times New Roman', Times, serif;
+        }
+        img{
+            width:600px;
+            height:auto;
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <script>
+        let s =0;
+        
+        function move(n){
+            s+=n;
+            switch(s){
+            case -1:
+                s=3;
+            break;
+            case 0:
+                document.getElementById("slide").innerHTML="<img src=\"i2.webp\" alt= \"Image\"/>";
+            break;
+            case 1:
+                document.getElementById("slide").innerHTML="<img src=\"i1.webp\" alt= \"Image\"/>";
+            break;
+            case 2:
+                document.getElementById("slide").innerHTML="<img src=\"i0.webp\" alt= \"Image\"/>";
+            break;
+            case 3:
+                document.getElementById("slide").innerHTML="<img src=\"i2.webp\" alt=\"Image\"/>";
+            break;
+            case 4:
+                s=0;
+            break;
+        }
+        }
+        
+    </script>
+    <h2>Gravitational waves have been detected for the first time</h2>
+    
+        
+
+    <div id="slide"><img src="i3.webp" alt="yeah"></div>
+    <a class="prev" onclick="move(-1)">Previous</a>
+    <a class="next" onclick="move(1)">Next</a>
+    <p id="a">The first direct detection of gravitational waves is without doubt one of the most remarkable breakthroughs of our time.
+    The<br> Advanced LIGO laboratories in the US states of Washington and Louisiana have traced the warping of space from the<br>
+    merger of two black holes about 1.3 billion light-years from Earth.
+    </p>
+    
+</body>
+</html>
